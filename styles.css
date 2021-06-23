@@ -1,0 +1,263 @@
+/* Reset default margin, padding, etc. */
+body, h1, h2, h3, ul, span, a, img {
+    margin: 0;
+    padding: 0;
+
+}
+/* Reset li discs */
+li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fonts */
+body, h1, h2, h3, ul, li, span, a, button {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Center both vertically and horizontally .container in body | background color*/
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    height: auto;
+    width: 375px;
+    background: #23272a;
+
+}
+
+/* Reset a tag default styles */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* grid setup */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 1fr 6fr 1fr;
+
+}
+/* Layout */
+header {
+    grid-column: 2 / 9;
+}
+main {
+    grid-column: 2 / 9;
+}
+footer {
+    grid-column: 2 / 9;
+
+}
+/* Header layout */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+/* Style h1 elements */
+h1 {
+    font-size: 1.5em;
+    
+}
+
+/* Resize icons */
+.icon {
+    max-width: 100%;
+}
+.logo {  
+    margin: 20px 0;
+    width: 15%;
+}
+.home {
+    height: 31px;
+    margin: 22px 0;
+}
+
+/* Style h2 elements */
+h2 {
+    font-size: 1.35em;
+    height: fit-content;
+}
+
+/* Style li elements */
+li {
+    background: #7289da;
+    border-radius: 12px;
+    margin: 25px 0;
+    padding: 5px 50px;
+}
+.button-1 {
+    margin-top: 50px;
+}
+/* main section layout */
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Style footer text */
+.credits {
+    font-size: 0.8em;
+}
+.donate {
+    font-size: 1.1em;
+}
+
+/* footer layout */
+footer {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+
+}
+.credits {
+    grid-row: 3;
+    grid-column: 1 / 5;
+    position: relative;
+    bottom: 0px;
+    left: -16px;
+}
+.donate {
+    font-size: 1.1em;
+    grid-row: 3;
+    grid-column: 7 / 10;
+    position: relative;
+    bottom: 0px;
+    right: -23px;
+}
+/* prof title styling */
+.title {
+    font-size: 1.3em;
+}
+/* span text styling */
+span {
+    font-size: 0.8em;
+}
+
+/* grid 1 setup */
+.grid1 {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: minmax(30px, auto);
+ 
+}
+
+/* Layout blacksmithing page */
+
+.title {
+    grid-column: 1 / 9;
+}
+h3 {
+    grid-column: 2 / 8;
+    height: fit-content;
+}
+.raw {
+    grid-column: 1 / 9;
+}
+.input-background {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+}
+.available-crafts {
+    grid-column: 1 / 9;
+    height: fit-content;
+}
+
+
+/* Input fields styling */
+.input-field {
+    border-radius: 5px;
+    border: 0px solid;
+    padding: 5px;
+    width: 30%;
+    margin: 0 5px;
+}
+.input-field:focus{
+    outline: none;
+}
+.button-2 {
+    background: #d9534f;
+    border-radius: 5px;
+    width: 18%;
+    border: 0px solid;
+    padding: 5px;
+    margin: 0 10px;
+    color: #ffffff;
+    font-size: 0.8em;
+}
+.button-3 {
+    background: #d9534f;
+    border-radius: 5px;
+    width: 18%;
+    border: 0px solid;
+    padding: 5px;
+    margin: 0 10px;
+    color: #ffffff;
+    font-size: 0.8em;
+}
+.button-2:hover {
+    cursor: pointer;
+}
+.items-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.raw {
+    height: fit-content;
+}
+.in-sale {
+    background: #9546e3;
+}
+/* Raw input fields override */
+
+.input-field-raw {
+    flex-grow: 1;
+}
+
+/* Dropdown list styling */
+
+.materials {
+    position: absolute;
+}
+.dropdown {
+    flex-grow: 3;
+    position: relative;
+}
+.materials-button {
+    width: 90%;
+    background-color: #7289da;
+}
+.materials-button:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+.material {
+    font-size: 0.7em;
+    padding: 0px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: black;
+
+}
+.material:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+.d-none {
+    display: none;
+}

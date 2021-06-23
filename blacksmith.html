@@ -1,0 +1,146 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestDeal - WoTLK gold making</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container grid">
+        <header>
+            <img class="icon logo" src="img/Icon.png" alt="">
+            <h1>BestDeal</h1>
+            <a href="index.html"><img class="icon home" src="img/Home.png" alt=""></a>
+        </header>
+
+        <main class="grid1">
+            <h2 class="title">B L A C K S M I T H I N G</h2>
+            
+            <!-- Bought materials input fields -->
+
+            <div class="raw">
+                <h3>Raw material cost</h2>                
+            
+
+                <form class="raw-input" autocomplete="off">
+                    <div class="input-background">                    
+                        <input type="text" id="price" class="input-field input-field-raw" required>
+                        <input type="text" id="quantity" value="1" class="input-field input-field-raw" >
+                        <div class="dropdown">
+                            <div class="input-field materials-button">Materials</div>
+                            <ul class="materials d-none">
+                                <li class="material">primordialSaronite</li>
+                                <li class="material">crusaderOrb</li>
+                                <li class="material">titansteelBar</li>
+                                <li class="material">saroniteBar</li>
+                                <li class="material">eternalEarth</li>
+                                <li class="material">eternalFire</li>
+                                <li class="material">eternalLife</li>
+                                <li class="material">eternalWater</li>
+                                <li class="material">kingsAmber</li>
+                                <li class="material">majesticZircon</li>
+                            </ul>
+                        </div>
+
+                        <input type="submit" value="Send" class="button-3" id="send">
+                    </div>                                                                
+                </form>
+            </div>
+            <!-- Calculated production cost output and AH price input fields -->
+
+
+            <div class="available-crafts">                
+                <div class="item1">
+                    <h3>Boots of kingly upheaval</h3>
+                    
+
+                    <form class="item1-input items-input" autocomplete="off">
+                        <input type="text" id="sale1" class="input-field input-field-price">
+                        <input type="text" id="production1" class="input-field input-field-production">
+                        <span class="profit">$$$</span>
+                        <input type="button" id="bootsUpheaval" class="button-2" value="InSale">
+                    </form>
+                </div>
+                <div class="item2">
+                    <h3>Pillars of Might</h3>
+                    
+
+                    <form class="item2-input items-input" autocomplete="off">
+                        <input type="text" id="sale2" class="input-field input-field-price">
+                        <input type="text" id="production2" class="input-field input-field-production">
+                        <span class="profit">$$$</span>
+                        <input type="button" id="pillarsMight" class="button-2" value="InSale">
+                    </form>
+                </div>
+                <div class="item3">
+                    <h3>Hellfrozen bonegrinders</h3>
+                    
+
+                    <form class="item3-input items-input" autocomplete="off">
+                        <input type="text" id="sale3" class="input-field input-field-price">
+                        <input type="text" id="production3" class="input-field input-field-production">
+                        <span class="profit">$$$</span>
+                        <input type="button" id="hellfrozenBonegrinders" class="button-2" value="InSale">
+                    </form>
+                </div>
+                <div class="item4">
+                    <h3>Breastplate of the White Knight</h3>
+                    
+
+                    <form class="item4-input items-input" autocomplete="off">
+                        <input type="text" id="sale4" class="input-field input-field-price">
+                        <input type="text" id="production4" class="input-field input-field-production">
+                        <span class="profit">$$$</span>
+                        <input type="button" id="whiteKnight" class="button-2" value="InSale">
+                    </form>
+                </div>
+                <div class="item5">
+                    <h3>Saronite Swordbreakers</h3>
+                    
+
+                    <form class="item5-input items-input" autocomplete="off">
+                        <input type="text" id="sale5" class="input-field input-field-price">
+                        <input type="text" id="production5" class="input-field input-field-production">
+                        <span class="profit">$$$</span>
+                        <input type="button" id="saroniteSwordbreakers" class="button-2" value="InSale">
+                    </form>
+                </div>
+                <div class="item6">
+                    <h3>Titanium Razorplate</h3>
+                    
+
+                    <form class="item6-input items-input" autocomplete="off">
+                        <input type="text" id="sale6" class="input-field input-field-price">
+                        <input type="text" id="production6" class="input-field input-field-production">
+                        <span class="profit">$$$</span>
+                        <input type="button" id="titaniumRazorplate" class="button-2" value="InSale">
+                    </form>
+                </div>
+                <div class="item7">
+                    <h3>Titanium Spikeguards</h3>
+                    
+
+                    <form class="item7-input items-input" autocomplete="off">
+                        <input type="text" id="sale7" class="input-field input-field-price">
+                        <input type="text" id="production7" class="input-field input-field-production">
+                        <span class="profit">$$$</span>
+                        <input type="button" id="titaniumSpikeguards" class="button-2" value="InSale">
+                    </form>
+                </div>
+            </div>
+
+        </main>
+
+        <footer>
+            <span class="credits">Made by: Glowbo</span>
+            <span class="donate">Liked it?</span>
+        </footer>
+    </div>
+    <script src="scripts/items.js"></script>
+    <script src="scripts/blacksmithing.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
