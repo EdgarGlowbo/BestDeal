@@ -261,3 +261,14 @@ h3 {
 .d-none {
     display: none;
 }
+
+/* sales input field border color */
+
+.available {
+    box-sizing: border-box;
+    border: solid 3px #069E2D;
+}
+.unavailable {
+    box-sizing: border-box;
+    border: solid 3px #D00000;
+}

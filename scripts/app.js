@@ -60,15 +60,15 @@ const craftingCost = (average, items) => {
 
                     totalPrice.push(average[item] * items[property][item]);
             
-            });
+                });
             costs.push(totalPrice.reduce((acc, curr) => acc + curr));
 
-    });
+        });
 
     for (let i = 0; i < costs.length; i++) {
 
         if (inSaleButtons[i].classList.contains('in-sale') === false) {
-            productionInputFields[i].value = costs[i];
+            productionInputFields[i].value = Math.round(costs[i]);
 
         }        
     }
@@ -112,6 +112,30 @@ const trackInventory = (inventory, itemsToRemove) => {
     localStorage.setItem('rawAverage', JSON.stringify(rawAverage));
 
 }
+// Iterates through items per recipe to determine if there are enough items to craft something and then changes sales input border color
+const enoughItems = items => {
+    let i = 0;
+    Object.keys(items)
+        .forEach(property => {    
+            
+            priceInputFields[i].classList.add('available');
+            priceInputFields[i].classList.remove('unavailable');                       
+
+            Object.keys(items[property])
+                .forEach(item => {
+                    if (quantityCounter[item] < items[property][item]) {  
+
+                        priceInputFields[i].classList.add('unavailable');
+                        priceInputFields[i].classList.remove('available');                       
+
+                    }                       
+                });
+            i++
+        });    
+};
+
+
+
 
 // Listens for click to update the average and calls the craftingCost and calculateProfit functions
 
@@ -125,6 +149,7 @@ rawInputForm.send.addEventListener('click', e => {
     craftingCost(rawAverage, itemsPerRecipe);
 
     calculateProfit(priceInputFields, productionInputFields);
+    enoughItems(itemsPerRecipe);
 
 
     // Saves rawAverage and quantityCounter to the localStorage
@@ -177,7 +202,7 @@ availableCrafts.addEventListener('click', e => {
         e.target.classList.add('in-sale');
         localStorage.setItem(lastPrice.id, lastPrice.value);
         trackInventory(quantityCounter, itemsPerRecipe[e.target.id]);
-        
+        enoughItems(itemsPerRecipe);
    
     } else if (e.target.classList.contains('button-2') && e.target.classList.contains('in-sale')) {
 
@@ -220,3 +245,5 @@ for (let i = 0; i < productionInputFields.length; i++) {
 
 }
 
+// Calls enoughItems at the start of the application
+enoughItems(itemsPerRecipe);
